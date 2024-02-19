@@ -1,13 +1,18 @@
 *{
     margin: 0;
     padding: 0;
-
     font-family: Ariel;
     border: border-box;   
 }
 
 html{
     scroll-behavior: smooth ;
+}
+
+@media (max-width:768px){
+    html{
+        width: 166%;
+    }
 }
 
 .navBar{
@@ -96,28 +101,30 @@ html{
 
 }
 
-.card2{
+.card2 {
     display: flex;
     justify-content: flex-end;
+    position: relative; /* Add relative positioning */
 }
 
-.card2 .card3{
-    position: fixed;
+.card2 .card3 {
+    position: fixed; /* Change to fixed positioning */
     top: 40px;
+    right: 0;
     width: 150px;
     height: 31px;
-    background-image: linear-gradient(to right, #2b5876 0%, #4e4376  51%, #2b5876  100%);    border-radius: 30px;
+    background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%);
+    border-radius: 30px;
     border-bottom-right-radius: 0;
     z-index: 1;
-
 }
 
-.card2 .card3:before{
+.card2 .card3:before {
     content: '';
-    position: fixed;
-    background-image: linear-gradient(to right, #2b5876 0%, #4e4376  70%, #2b5876  100%);
-    top: 70px;
-    right: 0.1px;
+    position: absolute;
+    background-image: linear-gradient(to right, #2b5876 0%, #4e4376 70%, #2b5876 100%);
+    top: 100%; /* Position relative to the bottom of .card3 */
+    right: 0;
     width: 10px;
     height: 20px;
     border-top-right-radius: 20px;
@@ -125,16 +132,17 @@ html{
     z-index: 2;
 }
 
-.card2 .card3:after{
+.card2 .card3:after {
     content: '';
-    position: fixed;
-    top:70px;
-    right: 0.1px;
+    position: absolute;
+    top: 100%; /* Position relative to the bottom of .card3 */
+    right: 0;
     width: 10px;
     height: 15px;
-    background-image: linear-gradient(to right, #2b5876 0%, #302850  70%, #2b5876  100%); 
+    background-image: linear-gradient(to right, #2b5876 0%, #302850 70%, #2b5876 100%);
     z-index: 1;
 }
+
 
 
 
@@ -161,7 +169,11 @@ html{
     text-decoration: none;
     transition: all ease 0.3s;
 }
-
+@media (max-width: 768px) {
+    .card2 .card3 {
+        top: 20px; /* Adjust top position as needed */
+    }
+}
 /* .ribbon{
     position: fixed;
     z-index: 2;
