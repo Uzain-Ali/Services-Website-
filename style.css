@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     font-family: Ariel;
-    border: border-box;   
 }
 
 html{
@@ -171,7 +170,7 @@ html{
 }
 @media (max-width: 768px) {
     .card2 .card3 {
-        top: 20px; /* Adjust top position as needed */
+        top: 35px; /* Adjust top position as needed */
     }
 }
 /* .ribbon{
@@ -1270,7 +1269,7 @@ ul a button{
 .footPanel2{
     background-color: white;
     color: black;
-    height: 35px;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     border-top: 2px solid black;
@@ -1299,7 +1298,7 @@ ul a button{
 .imagePoint{
     position: relative;
     top: 4px;
-    width: 1300px;
+    width: 100%;
     height: 100px;
     border-radius: 15px;
     overflow: hidden;
@@ -1682,7 +1681,7 @@ text-align: center;
     bottom: -135%;
     -webkit-mask-image: linear-gradient(to bottom, #000 62.125%, transparent 50%);
     mask-image: linear-gradient(to bottom, #000 62.125%, transparent 50%);
-    width: 200%;
+    width: 100%;
     overflow: hidden;
   }
   
