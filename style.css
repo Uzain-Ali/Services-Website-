@@ -290,14 +290,25 @@ html{
 
 /* Responsive styling for smaller screens */
 @media screen and (max-width: 600px) {
+    .panel {
+        height: 200px; /* Increase the height */
+        margin-bottom: 10px; /* Add margin at the bottom */
+    }
+
     .panelOps {
         flex-direction: column; /* Stack items vertically on smaller screens */
         text-align: center; /* Center-align text in each item */
     }
 
+    .panelOps a {
+        margin-top: 20px; /* Adjust the margin between anchor tags */
+    }
+
     .dropdown {
         display: block;
         width: 100%;
+        margin-top: 20px; /* Adjust the margin between anchor tags */
+
     }
 
     .dropdown-content {
@@ -309,8 +320,6 @@ html{
         border-bottom: 1px solid #ddd;
     }
 }
-
-
 .heroSection{
     margin: 0;
     padding: 17px;
@@ -1196,7 +1205,7 @@ footer{
     background-color: rgb(8, 71, 92);
     color: white;
     width: 100%;
-    height: 250px;
+    height: 100%;
     display: flex;
     justify-content: space-evenly;
 }
@@ -1328,8 +1337,8 @@ ul a button{
 #contactBox{
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: nowrap ;
-    height: 650px;
+    flex-wrap: wrap ;
+    height: 100%;
 }
 
 .bookingForm1{
@@ -1393,7 +1402,7 @@ ul a button{
 
 @media (min-width: 653px) and (max-width: 959px) {
     #contactBox{
-        height: 950px;
+        height: 100%;
     }
     .bookingForm1 {
         width: 100%;
@@ -1406,7 +1415,7 @@ ul a button{
 
 @media(max-width: 652px){
     #contactBox{
-        height: 1100px;
+        height: 100%;
     }
     .bookingForm1 {
         width: 100%;
