@@ -140,25 +140,3 @@ function getEmailConfig(formId) {
 
 
 
-// function sendEmail(e){
-//     e.preventDefault();
-
-//     Email.send({
-//         Host : "smtp.elasticemail.com",
-//         Username : "uzainali76@gmail.com",
-//         Password : "721A2D1C84124C44715443067C3F8803AE66",
-//         To : 'venturesync5@gmail.com',
-//         From : document.getElementById('email').value,
-//         Subject : "New Customer Detail",
-//         Body : "Name: " +  document.getElementById('name').value
-//             + "<br> Email: " +  document.getElementById('email').value
-//             + "<br> Email: " +  document.getElementById('phone').value
-//             + "<br> Address: " +  document.getElementById('address').value
-//             + "<br> House Size: " +  document.getElementById('hSize').value
-//             + "<br> AC Unit: " +  document.getElementById('acUnit').value
-//             + "<br> Dryer Vent Included: " + (document.getElementById('dryerVentIncluded').checked ? "Yes" : "No") 
-//     });
-    
-
-// return alert("Email Sent Successfully!")
-// }
