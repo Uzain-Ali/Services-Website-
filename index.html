@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="icon"  type="image/png" href="/images/Untitled design.png" sizes="9600x9600" />
+
+
+    <title>VentureSync</title>
+</head>
+<body>
+    <header>
+        <div class="card">
+            <i class="card1">
+                <a style="text-decoration: none;" href="http://127.0.0.1:5501/contact.html#contactBox"><p><i id="bookIcon" class="fa-regular fa-hand-pointer"></i>Book Now</p></a>
+            </i>
+        </div>
+        <div class="card2">
+            <i class="card3">
+                <p> 
+                        <i id="phoneIcon" class="fa-solid fa-phone" ></i>515-203-8715
+                </p>
+            </i>
+        </div>
+        <!-- <div class="ribbon1 ribbon">
+            <div class="socialIcon">
+                <i class="fbIcon fa-brands fa-facebook" style="color: 	#1877F2;"></i>
+                <i class="InstaIcon fa-brands fa-instagram"></i>
+                <i class="XIcon fa-brands fa-x-twitter"></i>
+            </div>
+        </div> -->
+        <div class="navBar">
+            <div class="navLogo border">
+                <a style="cursor: pointer;" href="/"><div class="logo"></div></a>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panelOps">
+                <a  href="/">Home</a>
+                <div class="dropdown">
+                    <a href="/services.html">Services<i class="arrowDown fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/services.html#airDuctCleaning">Air Duct Cleaning</a>
+                        <a href="/services.html#chimneySweep">Chimney Sweep</a>
+                        <a href="/services.html#carDetailing">Car Detailing</a>
+                    </div>
+                </div>
+                <a  href="/about.html">About</a>
+                <a  href="/contact.html">Contact</a>
+                <a  href="#faq">FAQs</a>
+            </div>
+        </div>
+    </header>
+    <div class="heroSection">
+            <div class="slider">
+                <div class="slides">
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+
+                    <div class="slide first">
+                        <video src="/images/Feeling dusty Smoky Grimy (2).mp4" autoplay loop muted></video>
+                    </div>
+                    <div class="slide">
+                        <img src="/images/515-203-8715.jpg" alt="img2">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/cHIMNEY sWEEP.jpg" alt="img3">
+                    </div>
+                    <div class="slide">
+                        <img src="/images/Car Detailing.jpg" alt="img4">
+                    </div>
+
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                    </div>
+
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <div class="main">
+        <h1 style="font-family: Poppins;">Trusted by</h1>
+        <div class="content1">
+            <div class="slider2">
+                <div class="slideImg">
+                     <img src="/images/nadca.png" alt="comp1">
+                </div>
+                <div class="slideImg">
+                     <img src="/images/ACCA.png" alt="comp2">
+                </div>
+                <div class="slideImg">
+                     <img src="/images/EPA.png" alt="comp3">
+                </div>
+                <div class="slideImg">
+                     <img src="/images/EPA1.png" alt="comp4">
+                </div>
+                <div class="slideImg">
+                    <img src="/images/IAQA.png" alt="comp5">
+                </div>
+                <div class="slideImg">
+                     <img src="/images/OSHA.png" alt="comp5">
+                </div>
+                <div class="slideImg">
+                     <img src="/images/nadca.png" alt="comp1">
+                </div>
+                <div class="slideImg">
+                     <img src="/images/ACCA.png" alt="comp2">
+                </div>
+                <div class="slideImg">
+                     <img src="/images/EPA.png" alt="comp3">
+                </div>
+                <div class="slideImg">
+                     <img src="/images/EPA1.png" alt="comp4">
+                </div>
+                <div class="slideImg">
+                    <img src="/images/IAQA.png" alt="comp5">
+                </div>
+                <div class="slideImg">
+                     <img src="/images/OSHA.png" alt="comp5">
+                </div>
+                <div class="slideImg">
+                    <img src="/images/nadca.png" alt="comp1">
+               </div>
+               <div class="slideImg">
+                    <img src="/images/ACCA.png" alt="comp2">
+               </div>
+               <div class="slideImg">
+                    <img src="/images/EPA.png" alt="comp3">
+               </div>
+               <div class="slideImg">
+                    <img src="/images/EPA1.png" alt="comp4">
+               </div>
+               <div class="slideImg">
+                   <img src="/images/IAQA.png" alt="comp5">
+               </div>
+               <div class="slideImg">
+                    <img src="/images/OSHA.png" alt="comp5">
+               </div>
+               <div class="slideImg">
+                <img src="/images/nadca.png" alt="comp1">
+                </div>
+                <div class="slideImg">
+                        <img src="/images/ACCA.png" alt="comp2">
+                </div>
+                <div class="slideImg">
+                        <img src="/images/EPA.png" alt="comp3">
+                </div>
+                <div class="slideImg">
+                        <img src="/images/EPA1.png" alt="comp4">
+                </div>
+                <div class="slideImg">
+                    <img src="/images/IAQA.png" alt="comp5">
+                </div>
+                <div class="slideImg">
+                        <img src="/images/OSHA.png" alt="comp5">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="serviceSection">
+        <div class="box">
+            <div class="boxContent">
+                <h2>Chimney Sweep</h2>
+                <div class="boxImg" style="background-image: url('/images/Chimney.jpg');"></div>
+                <div class="boxText">
+                    "Illuminate your home with safety and warmth. Our expert chimney sweep services ensure a clean and efficient fireplace. Trust us to keep the heart of your home aglow. Schedule your chimney sweep now."
+                </div>
+                <p><a href="/contact.html#contactBox"><button>Book Now</button></a>
+                <a href="/services.html#airDuctCleaning"><button>Read More</button></a></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="boxContent">
+                <h2>Air Duct Cleaning Service</h2>
+                <div class="boxImg" style="background-image: url('/images/0657c28eff0b9aea8a7cd79cf691c153b97095ea.jpg');"></div>
+                <div class="boxText">
+                    "Experience pure air quality. Elevate your living space with our professional air duct cleaning services. Breathe easier, live healthier. Schedule your service today."
+                </div>
+                <br>
+                <p><a href="/contact.html#contactBox"><button>Book Now</button></a>
+                    <a href="/services.html#chimneySweep"><button>Read More</button></a></p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="boxContent">
+                <h2>Car Detailing</h2>
+                <div class="boxImg" style="background-image: url('/images/Car.jpg');"></div>
+                <div class="boxText">
+                    "Revitalize your ride with our expert car detailing. From interior freshness to exterior shine, we've got your vehicle covered. Schedule now for a driving experience that turns heads."
+                </div>
+                <br>
+                <p><a href="/contact.html#contactBox"><button>Book Now</button></a>
+                    <a href="/services.html#carDetailing"><button>Read More</button></a></p>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="line"></div>
+    <br>
+    <div class="testimonials">
+        <div class="testHeading">
+            <span style="font-family: Poppins;">Comments</span>
+            <h1 style="font-family: Poppins;">Customers Says</h1>
+        </div>
+        <div class="testBoxContainer">
+                <i class="arrow fa fa-angle-left fa-2x"></i>
+            <!-- Box1 -->
+            <div class="testBox">
+                <div class="boxTop">
+                    <div class="profile">
+                        <div class="profileImg">
+                            <img src="/images/rev1.jpg" alt="review1">
+                        </div>
+                        <div class="profileName">
+                            <strong style="font-family: Poppins;">Liam John</strong>
+                            <span style="font-family: Poppins;">@liamjohn22</span>
+                        </div>
+
+                    </div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="comments">
+                    <p style="font-family: Poppins;">"VentureSync exceeded my expectations! The air duct cleaning service left my home feeling fresher, and the professionalism of the team was outstanding. Highly recommend for a breath of fresh air!"</p>
+                </div>
+            </div>
+
+            <!-- Box2 -->
+
+            <div class="testBox">
+                <div class="boxTop">
+                    <div class="profile">
+                        <div class="profileImg">
+                            <img src="/images/rev4.jpg" alt="review1">
+                        </div>
+                        <div class="profileName">
+                            <strong style="font-family: Poppins;">Sadie Logan</strong>
+                            <span style="font-family: Poppins;">@sadielogan65</span>
+                        </div>
+
+                    </div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="comments">
+                    <p style="font-family: Poppins;">"Impressed by the thoroughness of the air duct cleaning service I received. The team from VentureSync was efficient and left my home feeling noticeably fresher. A reliable choice for a healthier living space."</p>
+                </div>
+            </div>
+
+            <!-- Box3 -->
+
+            <div class="testBox">
+                <div class="boxTop">
+                    <div class="profile">
+                        <div class="profileImg">
+                            <img src="/images/rev3.jpg" alt="review1">
+                        </div>
+                        <div class="profileName">
+                            <strong style="font-family: Poppins;">Della Fletcher</strong>
+                            <span style="font-family: Poppins;">@dellaflether</span>
+                        </div>
+
+                    </div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="comments">
+                    <p style="font-family: Poppins;">"Exceeded my expectations with their air duct cleaning service. The VentureSync team was courteous, and the difference in air quality was remarkable. Definitely my go-to for a cleaner home environment!"</p>
+                </div>
+            </div>
+
+            <!-- Box4 -->
+
+            <div class="testBox">
+                <div class="boxTop">
+                    <div class="profile">
+                        <div class="profileImg">
+                            <img src="/images/rev2.jpg" alt="review1">
+                        </div>
+                        <div class="profileName">
+                            <strong style="font-family: Poppins;">Carrie McGonagle</strong>
+                            <span style="font-family: Poppins;">@carrie112</span>
+                        </div>
+
+                    </div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="comments">
+                    <p style="font-family: Poppins;">"Kudos to the outstanding air duct cleaning service from VentureSync. The team was prompt, professional, and left no detail overlooked. Breathing easier in my home now, thanks to their expertise!"</p>
+                </div>
+            </div>
+
+            <!-- Box5 -->
+
+            <!-- Example of a new box with different content -->
+            <div class="testBox">
+                <div class="boxTop">
+                    <div class="profile">
+                        <div class="profileImg">
+                            <img src="/images/rev5.jpg" alt="review5">
+                        </div>
+                        <div class="profileName">
+                            <strong style="font-family: Poppins;">Jessi Jeffer</strong>
+                            <span style="font-family: Poppins;">@jessijeff</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="comments">
+                    <p style="font-family: Poppins;">"Amazing chimney sweep service! The team from VentureSync did a thorough job, and my fireplace is working perfectly now. Professional and efficient, highly recommended!"</p>
+                </div>
+            </div>
+            <!-- Box6 -->
+
+            <!-- Example of a new box with different content -->
+            <div class="testBox">
+                <div class="boxTop">
+                    <div class="profile">
+                        <div class="profileImg">
+                            <img src="/images/rev6.jpg" alt="review5">
+                        </div>
+                        <div class="profileName">
+                            <strong style="font-family: Poppins;">Delilah Jason</strong>
+                            <span style="font-family: Poppins;">@delilah47</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                </div>
+                <div class="comments">
+                    <p style="font-family: Poppins;">"Had a great experience with VentureSync's car detailing service. Although there were a few minor issues, the overall result was satisfying. The team was responsive and addressed my concerns promptly. I'll consider them for future detailing needs."</p>
+                </div>
+            </div>
+            <!-- Box7 -->
+
+            <!-- Example of a new box with different content -->
+            <div class="testBox">
+                <div class="boxTop">
+                    <div class="profile">
+                        <div class="profileImg">
+                            <img src="/images/rev7.jpg" alt="review5">
+                        </div>
+                        <div class="profileName">
+                            <strong style="font-family: Poppins;">Jenny Riddle</strong>
+                            <span style="font-family: Poppins;">@jennridd</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="comments">
+                    <p style="font-family: Poppins;">"VentureSync's chimney sweep service is top-notch! The team was punctual, thorough, and left my chimney in excellent condition. I'm impressed with their professionalism and would recommend them to anyone in need of chimney services."</p>
+                </div>
+            </div>
+            <!-- Box8 -->
+
+            <!-- Example of a new box with different content -->
+            <div class="testBox">
+                <div class="boxTop">
+                    <div class="profile">
+                        <div class="profileImg">
+                            <img src="/images/rev8.jpg" alt="review5">
+                        </div>
+                        <div class="profileName">
+                            <strong style="font-family: Poppins;">Aliana Locus</strong>
+                            <span style="font-family: Poppins;">@locus58</span>
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                <div class="comments">
+                    <p style="font-family: Poppins;">Outstanding car detailing service! They made my car look brand new. The attention to detail and professionalism were exceptional. I'm definitely coming back for more!"</p>
+                </div>
+            </div>
+            <i class="arrow1 fa fa-angle-right fa-2x"></i>
+        </div>
+    </div>
+    
+    <div class="line"></div>
+    <br>
+
+    <div id="faq">
+        <div class="testHeading">
+            <h1 style="font-family: Poppins;">FAQ'S</h1>
+        </div>
+        <div class="faqSection">
+            <ul class="accordion">
+                <span style="padding-left: 75px;">Chimney Sweep</span>
+
+                <li>
+                    <input type="radio" name="accordion" id="first">
+                    <label for="first">Why do I need to sweep my chimney regularly?</label>
+                    <div class="faqcontent">
+                        <p>Regular chimney sweeping removes creosote buildup, preventing chimney fires. It also ensures proper ventilation, enhances efficiency, and reduces the risk of carbon monoxide exposure.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="second">
+                    <label for="second">How often should I schedule a chimney sweep?</label>
+                    <div class="faqcontent">
+                        <p> It is recommended to have your chimney swept at least once a year, preferably before the start of the heating season.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="third">
+                    <label for="third">Can I sweep my chimney myself?</label>
+                    <div class="faqcontent">
+                        <p>Chimney sweeping is best left to professionals. Certified chimney sweeps have the knowledge and tools to thoroughly clean and inspect your chimney.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="fourth">
+                    <label for="fourth">How much time does a chimney sweep appointment usually take?</label>
+                    <div class="faqcontent">
+                        <p> The duration of a chimney sweep appointment depends on factors like the type of chimney and the level of creosote buildup. Typically, it takes about 1 to 2 hours.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="forteen">
+                    <label for="forteen">What is creosote, and why is it important to remove it from the chimney?</label>
+                    <div class="faqcontent">
+                        <p> Creosote is a byproduct of burning wood. It can build up in the chimney, posing a fire hazard. Regular removal of creosote is essential for safety and efficient chimney operation.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="accordion">
+                <span>Air Duct Cleaning</span>
+                <li>
+                    <input type="radio" name="accordion" id="fifth">
+                    <label for="fifth">Why is air duct cleaning important?</label>
+                    <div class="faqcontent">
+                        <p>Air duct cleaning is crucial for removing dust, debris, and contaminants from your HVAC system. It improves indoor air quality, reduces allergens, and enhances the efficiency of your heating and cooling systems.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="sixth">
+                    <label for="sixth">How often should I get my air ducts cleaned?</label>
+                    <div class="faqcontent">
+                        <p> It is recommended to have your air ducts cleaned every 3 to 5 years. However, factors like pets, smoking, and home renovations may require more frequent cleaning.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="seventh">
+                    <label for="seventh">Are there any health benefits to air duct cleaning?</label>
+                    <div class="faqcontent">
+                        <p>Yes, air duct cleaning can contribute to improved indoor air quality, reducing the risk of respiratory issues and allergies by removing contaminants such as dust, mold, and pet dander.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="eight">
+                    <label for="eight">How long does the air duct cleaning process take?</label>
+                    <div class="faqcontent">
+                        <p>The duration of air duct cleaning varies based on factors such as the size of the system and the extent of contamination. On average, it can take between 1 to 2 hours.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="thirteen">
+                    <label for="thirteen">Do you use any chemicals during the air duct cleaning process?</label>
+                    <div class="faqcontent">
+                        <p>We use safe and environmentally friendly cleaning methods. No harmful chemicals are used that could compromise the air quality in your home.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="accordion">
+                <span style="padding-left: 95px;">Car Detailing</span>
+                <li>
+                    <input type="radio" name="accordion" id="ninth">
+                    <label for="ninth">What is included in a standard car detailing service?</label>
+                    <div class="faqcontent">
+                        <p>A standard car detailing service typically includes exterior wash, waxing, interior vacuuming, window cleaning, and interior surface cleaning.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="tenth">
+                    <label for="tenth">How often should I get my car detailed?</label>
+                    <div class="faqcontent">
+                        <p> The frequency of car detailing depends on factors like usage, weather conditions, and personal preferences. Generally, a thorough detailing every 3 to 6 months is recommended.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="eleventh">
+                    <label for="eleventh">Can car detailing remove scratches and swirl marks?</label>
+                    <div class="faqcontent">
+                        <p>Professional car detailing can diminish the appearance of scratches and swirl marks, but complete removal may depend on the depth of the damage.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="tweleth">
+                    <label for="tweleth">How long does a standard car detailing service take?</label>
+                    <div class="faqcontent">
+                        <p>The time required for car detailing depends on the level of service chosen and the condition of the vehicle. A standard detailing session usually takes around 2 to 3 hours.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="accordion" id="fifteen">
+                    <label for="fifteen">Do you offer mobile car detailing services?</label>
+                    <div class="faqcontent">
+                        <p>Yes, we offer mobile car detailing services for your convenience. Our team can come to your location and perform the detailing service on-site.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>    
+    </div>
+
+    <div class="line"></div>
+    <br>
+
+    <div class="lastSection">
+        <div class="usMap">
+            <h1 style="font-family: Poppins;">Serving Areas</h1>            
+            <img src="/images/usa.png" alt="usa map">
+        </div>
+        <div class="bookingForm">
+            <h2 style="font-family: poppins;">Request a Quote</h2>
+            <button class="serviceBtn" onclick="showServiceForm('airDuctCleaning')" >Air Duct Cleaning</button>
+            <button class="serviceBtn" onclick="showServiceForm('chimneySweep')" >Chimney Sweep</button>
+            <button class="serviceBtn" onclick="showServiceForm('carDetailing')" >Car Detailing</button>
+            <div class="formBox">
+                <form id="airDuctCleaningForm" onsubmit="sendEmail(event, 'airDuctCleaningForm'); reset();" class="serviceForm">
+                    <div class="inputBox">
+                        <div class="inputField">
+                            <input type="text" name="name" id="name" placeholder="Full Name" required>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="inputField">
+                            <input type="email" name="email" id="email" placeholder="Email" required>
+                            <i class="fa-regular fa-envelope"></i>                        
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputField">
+                            <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
+                            <i class="fa-solid fa-phone"></i>                        </div>
+                        <div class="inputField">
+                            <input type="Text" name="address" id="address" placeholder="Complete Address" required>
+                            <i class="fa-solid fa-location-dot"></i>                        
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputField">
+                            <input type="number" name="hSize" id="hSize" placeholder="House Size in Square feets">
+                            <i class="fa-solid fa-ruler"></i></i></i>                        </div>
+                        <div class="inputField">
+                            <select name="acUnit" id="acUnit" required>
+                                <option value="" disabled selected>Select number of AC Units</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                            <i class="fas fa-fan"></i>                     
+                        </div>
+                    </div>
+                    
+                    <div class="checkbox-container">
+                        <p style="display: inline-block;">Dryer Vent: </p>
+                        <div class="included">
+                        <input type="checkbox" id="dryerVentIncluded" class="checkbox-input">
+                        <label for="dryerVentIncluded" class="checkbox-custom">
+                            <div class="checkmark"></div>
+                        </label>
+                        <span class="checkbox-label">Included</span>
+                        </div>
+                        <div class="notIncluded">
+                        <input type="checkbox" id="dryerVentNotIncluded" class="checkbox-input">
+                        <label for="dryerVentNotIncluded" class="checkbox-custom">
+                            <div class="checkmark"></div>
+                        </label>
+                        <span class="checkbox-label"> Not Included</span>
+                        </div>
+                    </div>
+                
+                    <button class="formBtn" type="submit">Submit</button>
+                </form>
+
+                <!-- Chimney Sweep -->
+
+
+                <form id="chimneySweepForm" onsubmit="sendEmail(event, 'chimneySweepForm'); reset();" class="serviceForm">
+                    <div class="inputBox">
+                        <div class="inputField">
+                            <input type="text" name="name" id="name" placeholder="Full Name" required>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="inputField">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <i class="fa-regular fa-envelope"></i>                        
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputField">
+                            <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
+                            <i class="fa-solid fa-phone"></i>                        </div>
+                        <div class="inputField">
+                            <input type="Text" name="address" id="address" placeholder="Complete Address" required>
+                            <i class="fa-solid fa-location-dot"></i>                        
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputField">
+                            <input type="number" name="hSize" id="hSize" placeholder="House Size in Square feets">
+                            <i class="fa-solid fa-ruler"></i></i></i>                        </div>
+                        <div class="inputField">
+                            <select name="chimney" id="chimney" required>
+                                <option value="" disabled selected>Select number of Chimney</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <i class="fa-solid fa-house-chimney"></i>                
+                        </div>
+                    </div>
+                    <button class="formBtn" type="Submit">Submit</button>
+                </form>
+
+
+                <!-- Car detailing -->
+
+
+
+                <form id="carDetailingForm" onsubmit="sendEmail(event, 'carDetailingForm'); reset();" class="serviceForm">
+                    <div class="inputBox">
+                        <div class="inputField">
+                            <input type="text" name="name" id="name" placeholder="Full Name" required>
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="inputField">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <i class="fa-regular fa-envelope"></i>                        
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputField">
+                            <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
+                            <i class="fa-solid fa-phone"></i>                        </div>
+                        <div class="inputField">
+                            <input type="Text" name="address" id="address" placeholder="Complete Address" required>
+                            <i class="fa-solid fa-location-dot"></i>                        
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <div class="inputField">
+                            <input type="text" name="model" id="model" placeholder="Car Model + Year">
+                            <i class="fa-solid fa-car"></i>                     </div>
+                        <div class="inputField">
+                            <input type="Text" name="color" id="color" placeholder="Car Color">
+                            <i class="fa-solid fa-brush"></i>                      
+                        </div>
+                    </div>
+
+                    <div class="checkbox-container">
+                        <p style="display: inline-block;">Detailing: </p>
+                        <div class="included">
+                        <input type="checkbox" id="DetailingIncluded" class="checkbox-input">
+                        <label for="DetailingIncluded" class="checkbox-custom">
+                            <div class="checkmark"></div>
+                        </label>
+                        <span class="checkbox-label">Interior</span>
+                        </div>
+                        <div class="notIncluded">
+                        <input type="checkbox" id="DetailingNotIncluded" class="checkbox-input">
+                        <label for="DetailingNotIncluded" class="checkbox-custom">
+                            <div class="checkmark"></div>
+                        </label>
+                        <span class="checkbox-label"> Exterior</span>
+                        </div>
+                        <div class="bothIncluded">
+                        <input type="checkbox" id="bothIncluded1" class="checkbox-input">
+                        <label for="bothIncluded1" class="checkbox-custom">
+                            <div class="checkmark"></div>
+                        </label>
+                        <span class="checkbox-label"> Both</span>
+                        </div>
+                    </div>
+
+                    <button class="formBtn" type="Submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footPanel1">
+            <ul>
+                <img src="/images/Your_paragraph_text-removebg-preview.png" alt="">
+                <p style="width: 320px; text-align: center; color: #fff;">"Elevate your surroundings with VentureSync. From fresh air ducts to a sparkling clean car, we redefine clean. Your comfort, our priority."</p>
+            </ul>
+            <ul>
+                <p>Services</p>
+                <a href="/services.html#airDuctCleaning">Air Duct Cleaning</a>
+                <a href="/services.html#chimneySweep">Chimney Sweep</a>
+                <a href="/services.html#carDetailing">Car Detailing</a>
+            </ul>
+            <ul>
+                <p>Get to Know Us</p>
+                <a href="/about.html">About Us</a>
+                <a href="/contact.html">Contact Us</a>
+                <a href="/#faq">FAQs</a>
+            </ul>
+            <ul>
+                <p>Contact Information</p>
+                <a href="">                    
+                    <i class="fa-solid fa-phone"></i>
+                    <p style="color: #fff;" class="footPara">515-203-8715</p>
+                </a>
+                <a href="">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p style="color: #fff;" class="footPara">VentureSync@gmail.com</p>
+                </a>
+                <a href="">
+                    <i class="fa-regular fa-clock"></i>
+                    <p style="color: #fff;" class="footPara">Mon-Fri: 09:00 am - 06:00 pm <br>
+                    Sunday:  09:00 am - 06:00 pm</p>
+                </a>
+                <a href="/contact.html#contactBox">
+                    <button>Book Now</button>
+                </a>
+            </ul>
+        </div>
+
+        <div class="footPanel2">
+            <div></div>
+            <p>&copy; 2024 VentureSync</p>
+            <div class="socialIcons">
+                <i class="fbIcon fa-brands fa-facebook  fa-2x" style="color: 	#1877F2;"></i>
+                <i class="InstaIcon fa-brands fa-instagram fa-2x"></i>
+                <i class="XIcon fa-brands fa-x-twitter fa-2x"></i>
+            </div>
+        </div>
+        </div>
+    </footer>
+</body>
+</html>

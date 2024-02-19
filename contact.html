@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <div class="card">
+            <i class="card1">
+                <a style="text-decoration: none;" href="http://127.0.0.1:5501/contact.html#contactBox"><p><i id="bookIcon" class="fa-regular fa-hand-pointer"></i>Book Now</p></a>
+            </i>
+        </div>
+        <div class="card2">
+            <i class="card3">
+                <p> 
+                        <i id="phoneIcon" class="fa-solid fa-phone" ></i>515-203-8715
+                </p>
+            </i>
+        </div>
+
+        <div class="navBar">
+            <div class="navLogo border">
+                <a style="cursor: pointer;" href="/"><div class="logo"></div></a>
+            </div>
+        </div>
+
+        <div class="panel">
+            <div class="panelOps">
+                <a href="/">Home</a>
+                <div class="dropdown">
+                    <a href="/services.html">Services<i class="arrowDown fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="/services.html#airDuctCleaning">Air Duct Cleaning</a>
+                        <a href="/services.html#chimneySweep">Chimney Sweep</a>
+                        <a href="/services.html#carDetailing">Car Detailing</a>
+                    </div>
+                </div>
+                <a  href="/about.html">About</a>
+                <a  href="/contact.html">Contact</a>
+                <a  href="/#faq">FAQs</a>
+            </div>
+        </div>
+    </header>
+
+
+    
+    <div class="imagePoint">
+        <div class="imgBox">
+            <img src="/images/IMG-20240126-WA0005.jpg" alt="">
+        </div>
+    </div>
+    
+    <div id="contactBox">
+        <div class="contactForm">
+            <div class="bookingForm1">
+                <h2 style="font-family: poppins;">Request a Quote</h2>
+                <button class="serviceBtn" onclick="showServiceForm('airDuctCleaning')" >Air Duct Cleaning</button>
+                <button class="serviceBtn" onclick="showServiceForm('chimneySweep')" >Chimney Sweep</button>
+                <button class="serviceBtn" onclick="showServiceForm('carDetailing')" >Car Detailing</button>
+                <div class="formBox">
+                    <form id="airDuctCleaningForm" onsubmit="sendEmail(event, 'airDuctCleaningForm'); reset();" class="serviceForm">
+                        <div class="inputBox">
+                            <div class="inputField">
+                                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="inputField">
+                                <input type="email" name="email" id="email" placeholder="Email">
+                                <i class="fa-regular fa-envelope"></i>                        
+                            </div>
+                        </div>
+                        <div class="inputBox">
+                            <div class="inputField">
+                                <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
+                                <i class="fa-solid fa-phone"></i>                        </div>
+                            <div class="inputField">
+                                <input type="Text" name="address" id="address" placeholder="Complete Address" required>
+                                <i class="fa-solid fa-location-dot"></i>                        
+                            </div>
+                        </div>
+                        <div class="inputBox">
+                            <div class="inputField">
+                                <input type="number" name="hSize" id="hSize" placeholder="House Size in Square feets">
+                                <i class="fa-solid fa-ruler"></i></i></i>                        </div>
+                            <div class="inputField">
+                                <select name="acUnit" id="acUnit" required>
+                                    <option value="" disabled selected>Select number of AC Units</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <i class="fas fa-fan"></i>                     
+                            </div>
+                        </div>
+                        
+                        <div class="checkbox-container">
+                            <p style="display: inline-block;">Dryer Vent: </p>
+                            <div class="included">
+                            <input type="checkbox" id="dryerVentIncluded" class="checkbox-input">
+                            <label for="dryerVentIncluded" class="checkbox-custom">
+                                <div class="checkmark"></div>
+                            </label>
+                            <span class="checkbox-label">Included</span>
+                            </div>
+                            <div class="notIncluded">
+                            <input type="checkbox" id="dryerVentNotIncluded" class="checkbox-input">
+                            <label for="dryerVentNotIncluded" class="checkbox-custom">
+                                <div class="checkmark"></div>
+                            </label>
+                            <span class="checkbox-label"> Not Included</span>
+                            </div>
+                        </div>
+                    
+                        <button class="formBtn" type="Submit">Submit</button>
+                    </form>
+    
+    
+                    <!-- Chimney Sweep -->
+    
+    
+                    <form id="chimneySweepForm" onsubmit="sendEmail(event, 'chimneySweepForm'); reset();" class="serviceForm">
+                        <div class="inputBox">
+                            <div class="inputField">
+                                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="inputField">
+                                <input type="email" name="email" id="email" placeholder="Email">
+                                <i class="fa-regular fa-envelope"></i>                        
+                            </div>
+                        </div>
+                        <div class="inputBox">
+                            <div class="inputField">
+                                <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
+                                <i class="fa-solid fa-phone"></i>                        </div>
+                            <div class="inputField">
+                                <input type="Text" name="address" id="address" placeholder="Complete Address" required>
+                                <i class="fa-solid fa-location-dot"></i>                        
+                            </div>
+                        </div>
+                        <div class="inputBox">
+                            <div class="inputField">
+                                <input type="number" name="hSize" id="hSize" placeholder="House Size in Square feets">
+                                <i class="fa-solid fa-ruler"></i></i></i>                        </div>
+                            <div class="inputField">
+                                <select name="chimney" id="chimney" required>
+                                    <option value="" disabled selected>Select number of Chimney</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <i class="fa-solid fa-house-chimney"></i>                
+                            </div>
+                        </div>
+                        <button class="formBtn" type="Submit">Submit</button>
+                    </form>
+    
+    
+                    <!-- Car detailing -->
+    
+    
+    
+                    <form id="carDetailingForm" onsubmit="sendEmail(event, 'carDetailingForm'); reset();" class="serviceForm">
+                        <div class="inputBox">
+                            <div class="inputField">
+                                <input type="text" name="name" id="name" placeholder="Full Name" required>
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div class="inputField">
+                                <input type="email" name="email" id="email" placeholder="Email">
+                                <i class="fa-regular fa-envelope"></i>                        
+                            </div>
+                        </div>
+                        <div class="inputBox">
+                            <div class="inputField">
+                                <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
+                                <i class="fa-solid fa-phone"></i>                        </div>
+                            <div class="inputField">
+                                <input type="Text" name="address" id="address" placeholder="Complete Address" required>
+                                <i class="fa-solid fa-location-dot"></i>                        
+                            </div>
+                        </div>
+                        <div class="inputBox">
+                            <div class="inputField">
+                                <input type="text" name="model" id="model" placeholder="Car Model + Year">
+                                <i class="fa-solid fa-car"></i>                     </div>
+                            <div class="inputField">
+                                <input type="Text" name="color" id="color" placeholder="Car Color">
+                                <i class="fa-solid fa-brush"></i>                      
+                            </div>
+                        </div>
+                        
+                        <div class="checkbox-container">
+                            <p style="display: inline-block;">Detailing: </p>
+                            <div class="included">
+                            <input type="checkbox" id="DetailingIncluded" class="checkbox-input">
+                            <label for="DetailingIncluded" class="checkbox-custom">
+                                <div class="checkmark"></div>
+                            </label>
+                            <span class="checkbox-label">Interior</span>
+                            </div>
+                            <div class="notIncluded">
+                            <input type="checkbox" id="DetailingNotIncluded" class="checkbox-input">
+                            <label for="DetailingNotIncluded" class="checkbox-custom">
+                                <div class="checkmark"></div>
+                            </label>
+                            <span class="checkbox-label"> Exterior</span>
+                            </div>
+                            <div class="bothIncluded">
+                            <input type="checkbox" id="bothIncluded1" class="checkbox-input">
+                            <label for="bothIncluded1" class="checkbox-custom">
+                                <div class="checkmark"></div>
+                            </label>
+                            <span class="checkbox-label"> Both</span>
+                            </div>
+                        </div>
+
+                        <button class="formBtn" type="Submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="contactDetail">
+            <div class="detailbox">
+                <div class="boxContent1">
+                        <h2>Contact Information</h2>
+                        <div class="boxContentText">        
+                           
+                            <p class="footPara"> <i class="fa-solid fa-phone"></i>515-203-8715</p>
+                            <p  class="footPara"><i class="fa-regular fa-envelope"></i>VentureSync@gmail.com</p>
+
+                            <i class="fa-regular fa-clock"></i>
+                            <p  class="footPara">Mon-Fri: 09:00 am - 06:00 pm <br>
+                            Sunday:  09:00 am - 06:00 pm</p>
+                    </div>           
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+
+
+
+    <footer>
+        <div class="footPanel1">
+            <ul>
+                <img src="/images/Your_paragraph_text-removebg-preview.png" alt="">
+                <p style="width: 320px; text-align: center; color: #fff;">"Elevate your surroundings with VentureSync. From fresh air ducts to a sparkling clean car, we redefine clean. Your comfort, our priority."</p>
+            </ul>
+            <ul>
+                <p>Services</p>
+                <a href="/services.html#airDuctCleaning">Air Duct Cleaning</a>
+                <a href="/services.html#chimneySweep">Chimney Sweep</a>
+                <a href="/services.html#carDetailing">Car Detailing</a>
+            </ul>
+            <ul>
+                <p>Get to Know Us</p>
+                <a href="/about.html">About Us</a>
+                <a href="/contact.html">Contact Us</a>
+                <a href="/#faq">FAQs</a>
+            </ul>
+            <ul>
+                <p>Contact Information</p>
+                <a href="">                    
+                    <i class="fa-solid fa-phone"></i>
+                    <p style="color: #fff;" class="footPara">515-203-8715</p>
+                </a>
+                <a href="">
+                    <i class="fa-regular fa-envelope"></i>
+                    <p style="color: #fff;" class="footPara">VentureSync@gmail.com</p>
+                </a>
+                <a href="">
+                    <i class="fa-regular fa-clock"></i>
+                    <p style="color: #fff;" class="footPara">Mon-Fri: 09:00 am - 06:00 pm <br>
+                    Sunday:  09:00 am - 06:00 pm</p>
+                </a>
+                <a href="http://127.0.0.1:5501/contact.html#contactBox">
+                    <button>Book Now</button>
+                </a>
+            </ul>
+        </div>
+
+        <div class="footPanel2">
+            <div></div>
+            <p>&copy; 2024 VentureSync</p>
+            <div class="socialIcons">
+                <i class="fbIcon fa-brands fa-facebook  fa-2x" style="color: 	#1877F2;"></i>
+                <i class="InstaIcon fa-brands fa-instagram fa-2x"></i>
+                <i class="XIcon fa-brands fa-x-twitter fa-2x"></i>
+            </div>
+        </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
