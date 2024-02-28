@@ -595,67 +595,72 @@
             <button class="serviceBtn" onclick="showServiceForm('chimneySweep')" >Chimney Sweep</button>
             <button class="serviceBtn" onclick="showServiceForm('carDetailing')" >Car Detailing</button>
             <div class="formBox">
-                <form id="airDuctCleaningForm" onsubmit="sendEmail(event, 'airDuctCleaningForm'); reset();" class="serviceForm">
+                <form id="airDuctCleaningForm" data-service-type="airDuctCleaning" class="gform pure-form pure-form-stacked serviceForm" action="https://script.google.com/macros/s/AKfycby5V4-70wndOAaSC6RAIeAWxseeCBZ09GBmd9RY2xqXFU4KbftcdDQ4wm9TcClUtWw9/exec" method="POST">
                     <div class="inputBox">
-                        <div class="inputField">
-                            <input type="text" name="name" id="name" placeholder="Full Name" required>
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                        <div class="inputField">
-                            <input type="email" name="email" id="email" placeholder="Email" required>
-                            <i class="fa-regular fa-envelope"></i>                        
-                        </div>
+                      <div class="inputField">
+                        <input type="text" name="name" id="name" placeholder="Full Name" required>
+                        <i class="fa-solid fa-user"></i>
+                      </div>
+                      <div class="inputField">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <i class="fa-regular fa-envelope"></i>                        
+                      </div>
                     </div>
                     <div class="inputBox">
-                        <div class="inputField">
-                            <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
-                            <i class="fa-solid fa-phone"></i>                        </div>
-                        <div class="inputField">
-                            <input type="Text" name="address" id="address" placeholder="Complete Address" required>
-                            <i class="fa-solid fa-location-dot"></i>                        
-                        </div>
+                      <div class="inputField">
+                        <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
+                        <i class="fa-solid fa-phone"></i>
+                      </div>
+                      <div class="inputField">
+                        <input type="Text" name="address" id="address" placeholder="Complete Address" required>
+                        <i class="fa-solid fa-location-dot"></i>                        
+                      </div>
                     </div>
                     <div class="inputBox">
-                        <div class="inputField">
-                            <input type="number" name="hSize" id="hSize" placeholder="House Size in Square feets">
-                            <i class="fa-solid fa-ruler"></i></i></i>                        </div>
-                        <div class="inputField">
-                            <select name="acUnit" id="acUnit" required>
-                                <option value="" disabled selected>Select number of AC Units</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                            </select>
-                            <i class="fas fa-fan"></i>                     
-                        </div>
+                      <div class="inputField">
+                        <input type="number" name="hSize" id="hSize" placeholder="House Size in Square feet">
+                        <i class="fa-solid fa-ruler"></i>
+                      </div>
+                      <div class="inputField">
+                        <select name="acUnit" id="acUnit" required>
+                          <option value="" disabled selected>Select number of AC Units</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                        <i class="fas fa-fan"></i>
+                      </div>
                     </div>
                     
                     <div class="checkbox-container">
-                        <p style="display: inline-block;">Dryer Vent: </p>
-                        <div class="included">
-                        <input type="checkbox" id="dryerVentIncluded" class="checkbox-input">
+                      <p style="display: inline-block;">Dryer Vent: </p>
+                      <div class="included">
+                        <input type="checkbox" id="dryerVentIncluded" class="checkbox-input" name="dryerVent" value="Included">
                         <label for="dryerVentIncluded" class="checkbox-custom">
-                            <div class="checkmark"></div>
+                          <div class="checkmark"></div>
                         </label>
                         <span class="checkbox-label">Included</span>
-                        </div>
-                        <div class="notIncluded">
-                        <input type="checkbox" id="dryerVentNotIncluded" class="checkbox-input">
+                      </div>
+                      <div class="notIncluded">
+                        <input type="checkbox" id="dryerVentNotIncluded" class="checkbox-input" name="dryerVent" value="Not Included">
                         <label for="dryerVentNotIncluded" class="checkbox-custom">
-                            <div class="checkmark"></div>
+                          <div class="checkmark"></div>
                         </label>
                         <span class="checkbox-label"> Not Included</span>
-                        </div>
+                      </div>
                     </div>
-                
+                    
                     <button class="formBtn" type="submit">Submit</button>
-                </form>
-
+                  </form>
+                </center>
+              
+                <!-- JavaScript for form handling -->
+                
                 <!-- Chimney Sweep -->
-
-
-                <form id="chimneySweepForm" onsubmit="sendEmail(event, 'chimneySweepForm'); reset();" class="serviceForm">
+    
+    
+                <form id="chimneySweepForm" data-service-type="chimneySweep" class="gform pure-form pure-form-stacked serviceForm" action="https://script.google.com/macros/s/AKfycbyMYvs9W3yRXch4ZmA2IzBtxsSeGq0doHZl_zkV-V2DilNK3ufK8nJQatvsN2qLZNaQ/exec" method="POST" data-email="venturesync5@gmail.com">
                     <div class="inputBox">
                         <div class="inputField">
                             <input type="text" name="name" id="name" placeholder="Full Name" required>
@@ -681,7 +686,7 @@
                             <i class="fa-solid fa-ruler"></i></i></i>                        </div>
                         <div class="inputField">
                             <select name="chimney" id="chimney" required>
-                                <option value="" disabled selected>Select number of Chimney</option>
+                                <option value="" disabled selected>Number of Chimney</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -691,31 +696,30 @@
                     </div>
                     <button class="formBtn" type="Submit">Submit</button>
                 </form>
-
-
+              
+    
                 <!-- Car detailing -->
-
-
-
-                <form id="carDetailingForm" onsubmit="sendEmail(event, 'carDetailingForm'); reset();" class="serviceForm">
+    
+                <form id="carDetailingForm" data-service-type="carDetailing" class="gform pure-form pure-form-stacked serviceForm" action="https://script.google.com/macros/s/AKfycbzBPUhkBI-SVI7rnXTvBQSeXpkoNipN8yEIbuQjBSm2NRhEM9leM49T9u45nCkbObd5jQ/exec" method="POST">
                     <div class="inputBox">
-                        <div class="inputField">
-                            <input type="text" name="name" id="name" placeholder="Full Name" required>
-                            <i class="fa-solid fa-user"></i>
-                        </div>
-                        <div class="inputField">
-                            <input type="email" name="email" id="email" placeholder="Email">
-                            <i class="fa-regular fa-envelope"></i>                        
-                        </div>
+                      <div class="inputField">
+                        <input type="text" name="name" id="name" placeholder="Full Name" required>
+                        <i class="fa-solid fa-user"></i>
+                      </div>
+                      <div class="inputField">
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                        <i class="fa-regular fa-envelope"></i>                        
+                      </div>
                     </div>
                     <div class="inputBox">
-                        <div class="inputField">
-                            <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
-                            <i class="fa-solid fa-phone"></i>                        </div>
-                        <div class="inputField">
-                            <input type="Text" name="address" id="address" placeholder="Complete Address" required>
-                            <i class="fa-solid fa-location-dot"></i>                        
-                        </div>
+                      <div class="inputField">
+                        <input type="number" name="phone" id="phone" placeholder="Phone Number" required>
+                        <i class="fa-solid fa-phone"></i>
+                      </div>
+                      <div class="inputField">
+                        <input type="Text" name="address" id="address" placeholder="Complete Address" required>
+                        <i class="fa-solid fa-location-dot"></i>                        
+                      </div>
                     </div>
                     <div class="inputBox">
                         <div class="inputField">
@@ -726,7 +730,7 @@
                             <i class="fa-solid fa-brush"></i>                      
                         </div>
                     </div>
-
+            
                     <div class="checkbox-container">
                         <p style="display: inline-block;">Detailing: </p>
                         <div class="included">
@@ -751,12 +755,16 @@
                         <span class="checkbox-label"> Both</span>
                         </div>
                     </div>
-
-                    <button class="formBtn" type="Submit">Submit</button>
-                </form>
-            </div>
-        </div>
+                    
+                    <button class="formBtn" type="submit">Submit</button>
+                  </form>
+            
+    
+                  </div>
+                  </div>
+    
     </div>
+    
     <footer>
         <div class="footPanel1">
             <ul>

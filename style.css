@@ -112,9 +112,10 @@ html{
     right: 0;
     width: 150px;
     height: 31px;
-    background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%);
+    /* background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%); */
     border-radius: 30px;
     border-bottom-right-radius: 0;
+    background-image: linear-gradient(to right, #2b5876 0%, #302850  70%, #2b5876  100%); 
     z-index: 1;
 }
 
@@ -1890,3 +1891,14 @@ text-align: center;
     padding: 10px;
     text-align: center;
 }
+
+.centered-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 2px solid black;
+    padding: 20px;
+    z-index: 9999;
+  }

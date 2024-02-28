@@ -49,7 +49,7 @@ function showServiceForm(serviceType) {
     // Hide all forms
     var forms = document.getElementsByClassName("serviceForm");
     for (var i = 0; i < forms.length; i++) {
-        forms[i].style.display = "none";
+forms[i].style.display = "none";
     }
 
     // Show the selected form
@@ -69,74 +69,119 @@ window.onload = function() {
 
 
 
-function sendEmail(e, formId) {
-    e.preventDefault();
 
-    // Get the email configuration based on the form ID
-    var emailConfig = getEmailConfig(formId);
+(function() {
+  function validEmail(email) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
+  }
 
-    // Send the email
-    Email.send(emailConfig)
-        .then(function () {
-            // Show success message
-            alert("Sent Successfully!");
-        })
-        .catch(function (error) {
-            // Show error message
-            console.error("Error sending email:", error);
-            alert("Failed to send email. Please try again later.");
-        });
-}
-
-function getEmailConfig(formId) {
-    // Set up the email configuration
-    var emailConfig = {
-        Host: "smtp.elasticemail.com",
-        Username: "uzainali76@gmail.com",
-        Password: "721A2D1C84124C44715443067C3F8803AE66",
-        To: 'venturesync5@gmail.com',
-        From: document.getElementById(formId).querySelector('#email').value,
-        Subject: "New Customer Detail",
-        Body: ""
-    };
-
-    // Customize the email body based on the form ID
-    switch (formId) {
-        case "airDuctCleaningForm":
-            emailConfig.Body = "Name: " + document.getElementById(formId).querySelector('#name').value +
-                "<br> Email: " + document.getElementById(formId).querySelector('#email').value +
-                "<br> Phone: " + document.getElementById(formId).querySelector('#phone').value +
-                "<br> Address: " + document.getElementById(formId).querySelector('#address').value +
-                "<br> House Size: " + document.getElementById(formId).querySelector('#hSize').value +
-                "<br> AC Unit: " + document.getElementById(formId).querySelector('#acUnit').value +
-                "<br> Dryer Vent Included: " + (document.getElementById(formId).querySelector('#dryerVentIncluded').checked ? "Yes" : "No") 
-            break;
-        case "chimneySweepForm":
-            emailConfig.Body = "Name: " + document.getElementById(formId).querySelector('#name').value +
-                "<br> Email: " + document.getElementById(formId).querySelector('#email').value +
-                "<br> Phone: " + document.getElementById(formId).querySelector('#phone').value +
-                "<br> Address: " + document.getElementById(formId).querySelector('#address').value +
-                "<br> House Size: " + document.getElementById(formId).querySelector('#hSize').value +
-                "<br> Number of Chimneys: " + document.getElementById(formId).querySelector('#chimney').value;
-            break;
-        case "carDetailingForm":
-            emailConfig.Body = "Name: " + document.getElementById(formId).querySelector('#name').value +
-                "<br> Email: " + document.getElementById(formId).querySelector('#email').value +
-                "<br> Phone: " + document.getElementById(formId).querySelector('#phone').value +
-                "<br> Address: " + document.getElementById(formId).querySelector('#address').value +
-                "<br> Car Model + Year: " + document.getElementById(formId).querySelector('#model').value +
-                "<br> Car Color: " + document.getElementById(formId).querySelector('#color').value +
-                "<br> Detailing Interior: " + (document.getElementById(formId).querySelector('#DetailingIncluded').checked ? "Yes" : "No") +
-                "<br> Detailing Exterior: " + (document.getElementById(formId).querySelector('#DetailingNotIncluded').checked ? "Yes" : "No") +
-                "<br> Detailing Both: " + (document.getElementById(formId).querySelector('#bothIncluded1').checked ? "Yes" : "No");
-            break;
-        default:
-            console.error("Invalid form id");
-            break;
+  function validateHuman(honeypot) {
+    if (honeypot) {
+      console.log("Robot Detected!");
+      return true;
+    } else {
+      console.log("Welcome Human!");
     }
+  }
+  function getFormData(form) {
+    var elements = form.elements;
 
-    return emailConfig;
-}
+    var fields = Object.keys(elements).filter(function(k) {
+          return (elements[k].name !== "honeypot");
+    }).map(function(k) {
+      if(elements[k].name !== undefined) {
+        return elements[k].name;
+      } else if(elements[k].length > 0){
+        return elements[k].item(0).name;
+      }
+    }).filter(function(item, pos, self) {
+      return self.indexOf(item) == pos && item;
+    });
 
+    var formData = {};
+    fields.forEach(function(name){
+      var element = elements[name];
+      formData[name] = element.value;
+      if (element.length) {
+        var data = [];
+        for (var i = 0; i < element.length; i++) {
+          var item = element.item(i);
+          if (item.checked || item.selected) {
+            data.push(item.value);
+          }
+        }
+        formData[name] = data.join(', ');
+      }
+    });
 
+    // add form-specific values into the data
+    formData.formDataNameOrder = JSON.stringify(fields);
+    formData.formGoogleSheetName = form.dataset.sheet || "Sheet1"; // default sheet name
+    formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+    console.log(formData);
+    return formData;
+  }
+
+  function handleFormSubmit(event) {  
+    event.preventDefault();           
+    var form = event.target;
+    var data = getFormData(form);         
+    if( data.email && !validEmail(data.email) ) {   
+      var invalidEmail = form.querySelector(".email-invalid");
+      if (invalidEmail) {
+        invalidEmail.style.display = "block";
+        return false;
+      }
+    } else {
+      disableAllButtons(form);
+      var url = form.action;
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function() {
+          console.log(xhr.status, xhr.statusText);
+          console.log(xhr.responseText);
+          if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            showThankYouAlert();
+            form.reset(); // Optionally reset the form after submission
+          } 
+          return;
+      };
+      var encoded = Object.keys(data).map(function(k) {
+          return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+      }).join('&');
+      xhr.send(encoded);
+    }
+  }
+  
+  function loaded() {
+    console.log("Contact form submission handler loaded successfully.");
+    var forms = document.querySelectorAll("form.gform");
+    for (var i = 0; i < forms.length; i++) {
+      forms[i].addEventListener("submit", handleFormSubmit, false);
+    }
+  };
+  document.addEventListener("DOMContentLoaded", loaded, false);
+
+  function disableAllButtons(form) {
+    var buttons = form.querySelectorAll("button");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = true;
+    }
+  }
+
+  function showThankYouAlert() {
+    var alertDiv = document.createElement("div");
+    alertDiv.className = "centered-alert";
+    alertDiv.innerHTML = "<h1>Thanks for contacting us!</h1>";
+    document.body.appendChild(alertDiv);
+
+    // Remove the alert after some time
+    setTimeout(function() {
+      document.body.removeChild(alertDiv);
+    }, 3000); // 3 seconds
+  }
+})();
 
