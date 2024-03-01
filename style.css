@@ -10,8 +10,9 @@ html{
 
 @media (max-width:768px){
     html{
-        width: 170%;
+        width: 166%;
     }
+    
 }
 
 .navBar{
@@ -22,11 +23,6 @@ html{
     justify-content: center;
     align-items: center;
     box-shadow: 20px 20px 60px black, inset -20px -20px 60px #ffffff40;
-}
-.socialIcons1{
-    position: absolute;
-    top: 0;
-    right: 0;
 }
 
 .navLogo{
@@ -732,7 +728,7 @@ img,video{
 #faq{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 98%;
 }
 
 .faqSection{
@@ -1081,7 +1077,7 @@ img,video{
         align-items: center;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 100%;
+        width: 98%;
     }
     .inputField select{
         width: 110%;
