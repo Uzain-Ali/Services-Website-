@@ -23,7 +23,11 @@ html{
     align-items: center;
     box-shadow: 20px 20px 60px black, inset -20px -20px 60px #ffffff40;
 }
-
+.socialIcons1{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
 .navLogo{
     height: 142px;
