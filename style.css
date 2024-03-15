@@ -1354,18 +1354,21 @@ ul a button{
 
 
 .detailbox{
-    height: 350px;
+    height: 397px;
     width: 350px;
     margin-top: 15px;
+    margin-bottom: 45px;
     border: 2px solid black;
     background-color: #FFF;
-    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
-                -6px -6px 10px -1px rgba(255,255,255,0.7);
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7);
     flex-shrink: 2;
 }
-
+.contactDetail{
+    height: 100%;
+}
 .boxContent1{
     text-align: center;
+    height: 100%;
 }
 .boxContent1 h2{
     font-family: poppins;
