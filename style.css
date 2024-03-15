@@ -364,6 +364,13 @@ img,video{
     height: 100%;
     background-size: cover;
 }
+@media screen and (max-width: 600px){
+    video{
+        height: 80%;
+    }
+}
+
+
 
 
 .navigation-manual, .navigation-auto{
